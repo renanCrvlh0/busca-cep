@@ -18,22 +18,34 @@ window.onload = () => {
                     document.querySelector(`#${campo}`).innerHTML = retorno[campo]; //(`${campo}`[0].toUpperCase() + `${campo}`.substring(1) + ': ') + // retorno[campo];
                 }
             }
+            if(cep.value.length != 0){
+                const divBtn = document.querySelector('#container-cep');
+                const btnVoltar = document.createElement('button');
+                divBtn.appendChild(btnVoltar);
+                btnVoltar.classList.add('btn2');
+                btnVoltar.textContent = 'VOLTAR';
+            
+                btnVoltar.addEventListener('click', function(){
+                    location.reload();
+                })
+            }
         } 
         catch(error){
             alert('CEP não existe');
+            cep.value = '';
         }
         
-        if(cep.value.length != 0){
-            const divBtn = document.querySelector('#container-cep');
-            const btnVoltar = document.createElement('button');
-            divBtn.appendChild(btnVoltar);
-            btnVoltar.classList.add('btn2');
-            btnVoltar.textContent = 'VOLTAR';
+        // if(cep.value.length != 0){
+        //     const divBtn = document.querySelector('#container-cep');
+        //     const btnVoltar = document.createElement('button');
+        //     divBtn.appendChild(btnVoltar);
+        //     btnVoltar.classList.add('btn2');
+        //     btnVoltar.textContent = 'VOLTAR';
         
-            btnVoltar.addEventListener('click', function(){
-                location.reload();
-            })
-        }
+        //     btnVoltar.addEventListener('click', function(){
+        //         location.reload();
+        //     })
+        // }
         
     });   
     
