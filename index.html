@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>Buscador de CEP</title>
+</head>
+
+<body>
+    <header class="barra-nav">
+
+    </header>
+
+    <div id="buscaCep" class="grid-buscarcep">
+        <div class="container-buscarcep">
+            <input type="text" id="cep">
+        </div>
+
+        <div class="container-buscarbtn">
+            <input type="submit" value="BUSCAR" class="btn">
+        </div>
+    </div>
+
+    <!-- <div class="container-textoResultado">
+    <p  id="textoResultado" class="esconde">Resultado da Busca por Endereço ou CEP</p>
+    </div> -->
+
+    <div id="container-cep" class="container-cep">  
+        <p  id="textoResultado" class="esconde">Resultado da Busca por Endereço ou CEP</p>    
+        <table id="container-tabela" class="esconde">
+            <thead class="container-cabecalhoTabela">
+                <th class="th1">Logradouro/Nome</th>
+                <th class="th1">Bairro/Distrito</th>
+                <th class="th1">Localidade/Cidade</th>
+                <th class="th1">UF/Estado</th>
+            </thead>
+
+            <tbody class="container-corpoTabela">
+                <td id="logradouro"></td>
+                <td id="bairro"></td>
+                <td id="localidade"></td>
+                <td id="uf"></td>
+            </tbody>
+        </table>
+        
+        
+        
+        <!-- <p id="logradouro"></p>
+        <p id="bairro"></p>
+        <p id="localidade"></p>
+        <p id="uf"></p> -->
+    </div>
+
+</body>
+
+</html>
